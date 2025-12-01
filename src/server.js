@@ -3,7 +3,7 @@ import http from "node:http";
 import open from "open";
 
 const interpolate = (html, data) => {
-	return html.replace(
+	return html.replaceAll(
 		/{{\s*(\w+)\s*}}/g,
 		(match, placeholder) => data[placeholder] || ""
 	);
