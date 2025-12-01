@@ -1,3 +1,28 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "id": 1,
+      "content": "cristy",
+      "tags": [
+        "serious",
+        "work"
+      ]
+    },
+    {
+      "id": 2,
+      "content": "cristy",
+      "tags": [
+        "serious",
+        "work"
+      ]
+    },
+    {
+      "id": 3,
+      "content": "cristy",
+      "tags": [
+        "serious",
+        "work"
+      ]
+    }
+  ]
 }

@@ -8,6 +8,7 @@ import {
 	removeNote,
 } from "./notes.js";
 import { DisplayNotes } from "./utils.js";
+import { startServer } from "./server.js";
 
 yargs(hideBin(process.argv))
 	.command(
@@ -81,8 +82,10 @@ yargs(hideBin(process.argv))
 				type: "number",
 			});
 		},
-		(argv) => {
-			console.log(`Starting web server on port: ${argv.port}`);
+		async (argv) => {
+			const notesPromise = await listNotes();
+
+			startServer(notesPromise, argv.port);
 		}
 	)
 	.command(
